@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ben 10 Character Selector</title>
+</head>
+
+<body>
+
+<h2>Select a Ben 10 Character</h2>
+
+<select id="characterSelect">
+    <option value="ben">Ben</option>
+    <option value="heatblast">Heatblast</option>
+    <option value="fourarms">Four Arms</option>
+</select>
+
+<br><br>
+
+<img id="characterImage" src="images/ben.jpg" width="300">
+
+<script>
+
+const selectBox = document.getElementById("characterSelect");
+const image = document.getElementById("characterImage");
+
+selectBox.addEventListener("change", function () {
+
+    const character = selectBox.value;
+
+    image.src = "images/" + character + ".jpg";
+
+});
+
+</script>
+
+</body>
+</html>
