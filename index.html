@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Garfield Characters</title>
+</head>
+
+<body>
+
+<h2>Select a Character</h2>
+
+<select id="characterSelect">
+    <option value="garfield">Garfield</option>
+    <option value="odie">Odie</option>
+    <option value="nermal">Nermal</option>
+    <option value="pooky">Pooky</option>
+    <option value="jon">Jon</option>
+</select>
+
+<br><br>
+
+<img id="characterImage" src="images/garfield.jpg" width="300">
+
+<script>
+
+const selectBox = document.getElementById("characterSelect");
+const image = document.getElementById("characterImage");
+
+selectBox.addEventListener("change", function () {
+
+    const character = selectBox.value;
+
+    image.src = "images/" + character + ".jpg";
+
+});
+
+</script>
+
+</body>
+</html>
